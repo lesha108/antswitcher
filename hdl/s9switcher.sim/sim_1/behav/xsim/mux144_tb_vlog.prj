@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../s9base.gen/sources_1/bd/system_bd/ipshared/ec67/hdl" --include "../../../../s9base.gen/sources_1/bd/system_bd/ipshared/ee60/hdl" --include "F:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
+"../../../../src/mux144.v" \
+"../../../../src/seq144.v" \
+"../../../../src/mux144_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

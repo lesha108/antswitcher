@@ -1,0 +1,27 @@
+[package]
+name = "antswitcher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.30", features = ["cargo"] }
+ctrlc = "3.4.5"
+#display-interface = "0.5.0"
+display-interface-spi = "0.5.0"
+embedded-graphics = "0.8.1"
+embedded-hal = {version = "1.0"}
+embedded-hal-bus = "0.3.0"
+gpiocdev-embedded-hal = "0.1.2"
+linux-embedded-hal = "0.4.0"
+serialport = {version = "4.7.0", default-features = false}
+tinybmp = "0.6.0"
+num-format = "0.4.4"
+mipidsi = "0.9.0"
+bitflags = "2.4"
+byteorder = { version = "1", default-features = false }
+
+[profile.release]
+codegen-units = 1 
+#debug = true 
+lto = true
+opt-level = "z"

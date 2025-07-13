@@ -1,0 +1,151 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Bitmain Antminer S9 board DTS
+ *
+ * Copyright (C) 2018 Michal Simek
+ * Copyright (C) 2018 VanguardiaSur
+ */
+/dts-v1/;
+#include "zynq-7000.dtsi"
+
+/ {
+	model = "Bitmain Antminer S9 Board";
+	compatible = "bitmain,antminer-s9", "xlnx,zynq-7000";
+
+	aliases {
+		ethernet0 = &gem0;
+		serial0 = &uart1;
+		mmc0 = &sdhci0;
+		gpio0 = &gpio0;
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x40000000>;
+	};
+
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		bootcount@efffff0 {
+			reg = <0xefffff0 0x10>;
+			no-map;
+		};
+
+		fpga_space@f000000 {
+			reg = <0xf000000 0x1000000>;
+			no-map;
+		};
+	};
+
+	chosen {
+		bootargs = "earlycon";
+		stdout-path = "serial0:115200n8";
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		led0 {
+			label = "led0:green";
+			gpios = <&gpio0 15 0>;
+			linux,default-trigger = "heartbeat";
+		};
+	};
+
+	fpga_axi: fpga-axi@0 {
+		compatible = "simple-bus";
+		#address-cells = <0x1>;
+		#size-cells = <0x1>;
+		ranges;
+
+		axi_uartlite_0:	serial@42C00000 {
+			compatible = "xlnx,xps-uartlite-1.00.a";
+			reg = <0x42C00000 0x10000>;
+			interrupt-parent = <&intc>;
+			interrupts = <0 29 4>;
+			clock = <50000000>;
+		};
+	};
+};
+
+&clkc {
+	ps-clk-frequency = <33333333>;
+};
+
+&nfc0 {
+	status = "okay";
+};
+
+&smcc {
+	status = "okay";
+};
+
+&gem0 {
+	status = "okay";
+	phy-mode = "rgmii-id";
+	xlnx,ptp-enet-clock = <0x69f6bcb>;
+	phy-handle = <&ethernet_phy>;
+
+	/* 0362/5e62 */
+	ethernet_phy: ethernet-phy@1 {
+		reg = <1>;
+	};
+};
+
+&sdhci0 {
+	u-boot,dm-pre-reloc;
+	status = "okay";
+	disable-wp;
+};
+
+&uart1 {
+	u-boot,dm-pre-reloc;
+	status = "okay";
+};
+
+&spi0 {
+    #address-cells=<1>;     
+    #size-cells=<0>;	
+    status = "okay";	
+    num-cs = <1>;
+    bus-num = <0>;
+    is-decoded-cs = <0>;
+	
+    spidev@0x00 {
+        //compatible = "spidev";
+        compatible = "rohm,dh2228fv";
+	
+        /* Max SPI clock frequency via Zynq EMIO is 25MHz */	
+        spi-max-frequency = <25000000>;
+
+        /* slave number - CS */
+        reg = <0>;
+
+        /* Set SPI mode = 0 */		
+        spi-cpol = <0>;	
+        spi-cpha = <0>;
+    };
+};
+
+&i2c0 {
+	status = "okay";
+	clock-frequency = <400000>;
+
+        ads1115@48{
+           compatible = "ads1115";
+           reg = <0x48>;
+        };
+};
+
+&i2c1 {
+	status = "okay";
+	clock-frequency = <400000>;
+
+        ads1115@48{
+           compatible = "ads1115";
+           reg = <0x48>;
+        };
+};
+

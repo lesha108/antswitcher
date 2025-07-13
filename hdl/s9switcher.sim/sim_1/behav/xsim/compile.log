@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Xilinx/projects/s9base/src/mux144.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux144
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Xilinx/projects/s9base/src/seq144.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seq144
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Xilinx/projects/s9base/src/mux144_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux144_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Xilinx/projects/s9base/s9base.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

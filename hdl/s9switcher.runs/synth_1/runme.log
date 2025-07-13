@@ -1,0 +1,767 @@
+
+*** Running vivado
+    with args -log system_bd_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_bd_wrapper.tcl
+
+
+
+****** Vivado v2022.2.2 (64-bit)
+  **** SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+source system_bd_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1149.199 ; gain = 120.645
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Xilinx/projects/s9base/ip_repo/sequencerip_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Xilinx/projects/s9base/ip_repo/sequencerip_1_0'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sys_rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sys_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'sys_rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'sys_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'sys_rst_n'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'sys_rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'sys_rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'sys_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Xilinx/projects/s9base/ip_repo/sequencerip_1_0'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1186.199 ; gain = 12.117
+Command: read_checkpoint -auto_incremental -incremental F:/Xilinx/projects/s9switcher/s9switcher.srcs/utils_1/imports/synth_1/system_bd_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from F:/Xilinx/projects/s9switcher/s9switcher.srcs/utils_1/imports/synth_1/system_bd_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top system_bd_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6904
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1992.453 ; gain = 413.691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_bd_wrapper' [F:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/hdl/system_bd_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'system_bd' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:307]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_LCD_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_LCD_0/synth/system_bd_LCD_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_LCD_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_LCD_0/synth/system_bd_LCD_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_BuzzerCtrl_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_BuzzerCtrl_0/synth/system_bd_BuzzerCtrl_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_BuzzerCtrl_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_BuzzerCtrl_0/synth/system_bd_BuzzerCtrl_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_xlslice_0_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_xlslice_0_0/synth/system_bd_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_xlslice_0_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_xlslice_0_0/synth/system_bd_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_xlconstant_0_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_xlconstant_0_0/synth/system_bd_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_xlconstant_0_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_xlconstant_0_0/synth/system_bd_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_ad_iobuf_1_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_1_0/synth/system_bd_ad_iobuf_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ad_iobuf' [F:/Xilinx/projects/s9switcher/s9switcher.srcs/sources_1/imports/src/ad_iobuf.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ad_iobuf' (0#1) [F:/Xilinx/projects/s9switcher/s9switcher.srcs/sources_1/imports/src/ad_iobuf.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_ad_iobuf_1_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_1_0/synth/system_bd_ad_iobuf_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_ad_iobuf_SCL_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_SCL_0/synth/system_bd_ad_iobuf_SCL_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_ad_iobuf_SCL_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_SCL_0/synth/system_bd_ad_iobuf_SCL_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_ad_iobuf_0_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_0_0/synth/system_bd_ad_iobuf_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_ad_iobuf_0_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_0_0/synth/system_bd_ad_iobuf_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_ad_iobuf_SDA_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_SDA_0/synth/system_bd_ad_iobuf_SDA_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_ad_iobuf_SDA_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_ad_iobuf_SDA_0/synth/system_bd_ad_iobuf_SDA_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'system_bd_axi_uartlite_0_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/synth/system_bd_axi_uartlite_0_0.vhd:86]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 50000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_uartlite' declared at 'f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2128' bound to instance 'U0' of component 'axi_uartlite' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/synth/system_bd_axi_uartlite_0_0.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+INFO: [Synth 8-638] synthesizing module 'uartlite_core' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+INFO: [Synth 8-638] synthesizing module 'baudrate' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+INFO: [Synth 8-256] done synthesizing module 'system_bd_axi_uartlite_0_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/synth/system_bd_axi_uartlite_0_0.vhd:86]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_khz_gen_0_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_khz_gen_0_0/synth/system_bd_khz_gen_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'khz_gen' [F:/Xilinx/projects/s9switcher/s9switcher.srcs/sources_1/new/khz_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'khz_gen' (0#1) [F:/Xilinx/projects/s9switcher/s9switcher.srcs/sources_1/new/khz_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_khz_gen_0_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_khz_gen_0_0/synth/system_bd_khz_gen_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_processing_system7_0_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6157] synthesizing module 'BIBUF' [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:729]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:729]
+INFO: [Synth 8-6157] synthesizing module 'PS7' [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:405]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_processing_system7_0_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/synth/system_bd_processing_system7_0_0.v:53]
+WARNING: [Synth 8-7071] port 'GPIO_T' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_SCLK_T' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_MOSI_T' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_MISO_O' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_MISO_T' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_SS1_O' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_SS2_O' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7071] port 'SPI0_SS_T' of module 'system_bd_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_bd_processing_system7_0_0' has 92 connections declared, but only 84 given [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:552]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_ps7_0_axi_periph_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:715]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1HHWGQV' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:12]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_auto_pc_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/synth/system_bd_auto_pc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_axi_protocol_converter' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4807]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4225]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_aw_channel' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3970]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_cmd_translator' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3463]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_incr_cmd' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3091]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_incr_cmd' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3091]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_wrap_cmd' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2901]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_wrap_cmd' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2901]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_cmd_translator' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3463]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_wr_cmd_fsm' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3223]
+INFO: [Synth 8-226] default block is never used [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3277]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_wr_cmd_fsm' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3223]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_aw_channel' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3970]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_b_channel' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3605]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_b_channel' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3605]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_ar_channel' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4081]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3333]
+INFO: [Synth 8-226] default block is never used [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3395]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3333]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_ar_channel' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4081]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_r_channel' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3810]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo__parameterized1' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo__parameterized1' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo__parameterized2' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_simple_fifo__parameterized2' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2815]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s_r_channel' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3810]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized1' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized1' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized2' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized2' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_27_axi_register_slice' is unconnected for instance 'SI_REG' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
+WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_27_axi_register_slice' has 93 connections declared, but only 92 given [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized3' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized3' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized4' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized4' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized5' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized5' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized6' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axic_register_slice__parameterized6' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_27_axi_register_slice__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_27_axi_register_slice' is unconnected for instance 'MI_REG' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
+WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_27_axi_register_slice' has 93 connections declared, but only 92 given [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_b2s' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4225]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_27_axi_protocol_converter' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4807]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_auto_pc_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_auto_pc_0/synth/system_bd_auto_pc_0.v:53]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_bd_auto_pc_0' is unconnected for instance 'auto_pc' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:247]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_bd_auto_pc_0' is unconnected for instance 'auto_pc' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:247]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'system_bd_auto_pc_0' has 59 connections declared, but only 57 given [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:247]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1HHWGQV' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_ps7_0_axi_periph_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:715]
+INFO: [Synth 8-638] synthesizing module 'system_bd_rst_ps7_0_50M_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/synth/system_bd_rst_ps7_0_50M_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/synth/system_bd_rst_ps7_0_50M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:132132' bound to instance 'POR_SRL_I' of component 'SRL16' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:132132]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [F:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:132132]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'system_bd_rst_ps7_0_50M_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/synth/system_bd_rst_ps7_0_50M_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:699]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:699]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:699]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_bd_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:699]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'system_bd_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:699]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_util_vector_logic_0_2' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_util_vector_logic_0_2/synth/system_bd_util_vector_logic_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'util_vector_logic_v2_0_2_util_vector_logic' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/3d84/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'util_vector_logic_v2_0_2_util_vector_logic' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/3d84/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_util_vector_logic_0_2' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_util_vector_logic_0_2/synth/system_bd_util_vector_logic_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_bd_util_vector_logic_1_0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_util_vector_logic_1_0/synth/system_bd_util_vector_logic_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'util_vector_logic_v2_0_2_util_vector_logic__parameterized0' [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/3d84/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'util_vector_logic_v2_0_2_util_vector_logic__parameterized0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/3d84/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_util_vector_logic_1_0' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_util_vector_logic_1_0/synth/system_bd_util_vector_logic_1_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd' (0#1) [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/synth/system_bd.v:307]
+INFO: [Synth 8-6155] done synthesizing module 'system_bd_wrapper' (0#1) [F:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/hdl/system_bd_wrapper.v:12]
+WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
+WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
+WARNING: [Synth 8-6014] Unused sequential element state_r1_reg was removed.  [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3383]
+WARNING: [Synth 8-6014] Unused sequential element s_arlen_r_reg was removed.  [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3384]
+WARNING: [Synth 8-7129] Port Op2[3] in module util_vector_logic_v2_0_2_util_vector_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Op2[2] in module util_vector_logic_v2_0_2_util_vector_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Op2[1] in module util_vector_logic_v2_0_2_util_vector_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Op2[0] in module util_vector_logic_v2_0_2_util_vector_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rlast in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wlast in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[7] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[6] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[5] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[4] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arburst[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arburst[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_27_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_27_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_27_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[7] in module axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[6] in module axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2239.172 ; gain = 660.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2239.172 ; gain = 660.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2239.172 ; gain = 660.410
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 2239.957 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/system_bd_processing_system7_0_0.xdc] for cell 'system_bd_i/processing_system7_0/inst'
+Finished Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/system_bd_processing_system7_0_0.xdc] for cell 'system_bd_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_processing_system7_0_0/system_bd_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_bd_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/system_bd_axi_uartlite_0_0_board.xdc] for cell 'system_bd_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/system_bd_axi_uartlite_0_0_board.xdc] for cell 'system_bd_i/axi_uartlite_0/U0'
+Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/system_bd_axi_uartlite_0_0.xdc] for cell 'system_bd_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_axi_uartlite_0_0/system_bd_axi_uartlite_0_0.xdc] for cell 'system_bd_i/axi_uartlite_0/U0'
+Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/system_bd_rst_ps7_0_50M_0_board.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/system_bd_rst_ps7_0_50M_0_board.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/system_bd_rst_ps7_0_50M_0.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ip/system_bd_rst_ps7_0_50M_0/system_bd_rst_ps7_0_50M_0.xdc] for cell 'system_bd_i/rst_ps7_0_50M/U0'
+Parsing XDC File [F:/Xilinx/projects/s9switcher/s9switcher.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [F:/Xilinx/projects/s9switcher/s9switcher.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Xilinx/projects/s9switcher/s9switcher.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_bd_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_bd_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2338.969 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  FDR => FDRE: 18 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2338.969 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/processing_system7_0/inst. (constraint file  F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/dont_touch.xdc, line 58).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/axi_uartlite_0/U0. (constraint file  F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/dont_touch.xdc, line 61).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/rst_ps7_0_50M/U0. (constraint file  F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/dont_touch.xdc, line 69).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/VDD. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/LCD. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/axi_uartlite_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/rst_ps7_0_50M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ad_iobuf_SDA. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ad_iobuf_SCL. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ad_iobuf_SDA1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ad_iobuf_SCL1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/khz_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/BuzzerCtrl. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/util_vector_logic_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/ControlPins. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_bd_i/util_vector_logic_1. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_27_b2s_wr_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                             0010 |                               00
+                 sm_read |                             1000 |                               01
+                sm_write |                             0100 |                               10
+                 sm_resp |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+            SM_DONE_WAIT |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_27_b2s_wr_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+                 SM_DONE |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_27_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   3 Input    5 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               66 Bit    Registers := 4     
+	               47 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 9     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 83    
++---Muxes : 
+	   2 Input   66 Bit        Muxes := 4     
+	   2 Input   47 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 24    
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 19    
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 143   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1731]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [f:/Xilinx/projects/s9switcher/s9switcher.gen/sources_1/bd/system_bd/ipshared/f0b4/hdl/axi_register_slice_v2_1_vl_rfs.v:1731]
+INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_uartlite.
+INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_uartlite.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_RX_I/data_shift_reg[15] | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_TX_I/data_shift_reg[15] | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                  | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[15] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | memory_reg[3]             | 20     | 20         | 20     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | memory_reg[3]             | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | memory_reg[31]            | 34     | 34         | 0      | 34      | 0      | 0      | 0      | 
+|dsrl__4     | memory_reg[31]            | 13     | 13         | 0      | 13      | 0      | 0      | 0      | 
+|dsrl__6     | memory_reg[3]             | 20     | 20         | 20     | 0       | 0      | 0      | 0      | 
+|dsrl__7     | memory_reg[3]             | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BIBUF   |   130|
+|2     |BUFG    |     1|
+|3     |CARRY4  |    10|
+|4     |LUT1    |    45|
+|5     |LUT2    |    37|
+|6     |LUT3    |   151|
+|7     |LUT4    |    69|
+|8     |LUT5    |    96|
+|9     |LUT6    |   114|
+|10    |MUXF7   |     1|
+|11    |PS7     |     1|
+|12    |SRL16   |     1|
+|13    |SRL16E  |    35|
+|14    |SRLC32E |    22|
+|15    |FDCE    |    17|
+|16    |FDR     |     8|
+|17    |FDRE    |   444|
+|18    |FDSE    |    37|
+|19    |IBUF    |     1|
+|20    |IOBUF   |     4|
+|21    |OBUF    |    11|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 342 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 2338.969 ; gain = 660.410
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.969 ; gain = 760.207
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2338.969 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2345.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  FDR => FDRE: 8 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete, checksum: 42dd4dba
+INFO: [Common 17-83] Releasing license: Synthesis
+238 Infos, 156 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2345.598 ; gain = 1150.805
+INFO: [Common 17-1381] The checkpoint 'F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/system_bd_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_bd_wrapper_utilization_synth.rpt -pb system_bd_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri May 23 10:42:40 2025...

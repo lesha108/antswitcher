@@ -1,0 +1,1 @@
+img : {[bootloader] /home/lesha/antswitch/build/fsbl.elf  /home/lesha/antswitch/build/system_top.bit  /home/lesha/antswitch/build/u-boot.elf}

@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# Script to check for and run user-supplied /mnt/mmc/autorun.sh
+#
+
+case "$1" in
+  start)
+        mkdir /mnt/mmc
+        mount /dev/mmcblk0p1 /mnt/mmc
+	if test -f /mnt/mmc/autorun.sh; then
+		source /mnt/mmc/autorun.sh
+	fi
+	;;
+  stop)
+	;;
+  restart|reload)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

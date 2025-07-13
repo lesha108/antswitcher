@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri May 23 10:41:38 2025
+# Process ID: 11748
+# Current directory: F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1
+# Command line: vivado.exe -log system_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_bd_wrapper.tcl
+# Log file: F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1/system_bd_wrapper.vds
+# Journal file: F:/Xilinx/projects/s9switcher/s9switcher.runs/synth_1\vivado.jou
+# Running On: LESHA2023, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 34070 MB
+#-----------------------------------------------------------
+source system_bd_wrapper.tcl -notrace

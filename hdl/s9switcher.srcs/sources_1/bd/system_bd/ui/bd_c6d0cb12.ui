@@ -1,0 +1,83 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.694107",
+   "Default View_TopLeft":"-278,634",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1170 -y 90 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1170 -y 120 -defaultsOSRD
+preplace port port-id_SPI0_SS_O_0 -pg 1 -lvl 4 -x 1170 -y 590 -defaultsOSRD
+preplace port port-id_SPI0_MOSI_O_0 -pg 1 -lvl 4 -x 1170 -y 530 -defaultsOSRD
+preplace port port-id_SPI0_SCLK_O_0 -pg 1 -lvl 4 -x 1170 -y 560 -defaultsOSRD
+preplace port port-id_ulite_rx_I_0 -pg 1 -lvl 0 -x 0 -y 940 -defaultsOSRD
+preplace port port-id_ulite_tx_O_0 -pg 1 -lvl 4 -x 1170 -y 1090 -defaultsOSRD
+preplace portBus Dout_0 -pg 1 -lvl 4 -x 1170 -y 1490 -defaultsOSRD
+preplace portBus I2C0_SDA -pg 1 -lvl 4 -x 1170 -y 210 -defaultsOSRD
+preplace portBus I2C0_SCL -pg 1 -lvl 4 -x 1170 -y 350 -defaultsOSRD
+preplace portBus I2C1_SDA -pg 1 -lvl 4 -x 1170 -y 490 -defaultsOSRD
+preplace portBus I2C1_SCL -pg 1 -lvl 4 -x 1170 -y 660 -defaultsOSRD
+preplace portBus Buzzer_O -pg 1 -lvl 4 -x 1170 -y 1380 -defaultsOSRD
+preplace portBus Dout_1 -pg 1 -lvl 4 -x 1170 -y 1590 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 310 -defaultsOSRD
+preplace inst VDD -pg 1 -lvl 1 -x 230 -y 870 -defaultsOSRD
+preplace inst LCD -pg 1 -lvl 3 -x 1000 -y 1490 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -x 1000 -y 1080 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 650 -y 1060 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 730 -defaultsOSRD
+preplace inst ad_iobuf_SDA -pg 1 -lvl 3 -x 1000 -y 200 -defaultsOSRD
+preplace inst ad_iobuf_SCL -pg 1 -lvl 3 -x 1000 -y 340 -defaultsOSRD
+preplace inst ad_iobuf_SDA1 -pg 1 -lvl 3 -x 1000 -y 480 -defaultsOSRD
+preplace inst ad_iobuf_SCL1 -pg 1 -lvl 3 -x 1000 -y 650 -defaultsOSRD
+preplace inst khz_gen_0 -pg 1 -lvl 2 -x 650 -y 1260 -defaultsOSRD
+preplace inst BuzzerCtrl -pg 1 -lvl 2 -x 650 -y 1370 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 1000 -y 1380 -defaultsOSRD
+preplace inst ControlPins -pg 1 -lvl 2 -x 650 -y 1590 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 3 -x 1000 -y 1590 -defaultsOSRD
+preplace netloc BuzzerCtrl_Dout 1 2 1 NJ 1370
+preplace netloc Net 1 3 1 NJ 490
+preplace netloc Net1 1 3 1 NJ 210
+preplace netloc Net2 1 3 1 NJ 350
+preplace netloc Net3 1 3 1 NJ 660
+preplace netloc VDD_dout 1 1 1 430 480n
+preplace netloc ad_iobuf_0_dio_o 1 1 3 430J 130 NJ 130 1150
+preplace netloc ad_iobuf_1_dio_o 1 1 3 500J 200 860J 270 1150
+preplace netloc ad_iobuf_SCL1_dio_o 1 1 3 490J 580 NJ 580 1140
+preplace netloc ad_iobuf_SDA1_dio_o 1 1 3 NJ 300 830J 410 1150
+preplace netloc axi_uartlite_0_interrupt 1 0 4 20 930 NJ 930 NJ 930 1150
+preplace netloc axi_uartlite_0_tx 1 3 1 NJ 1090
+preplace netloc khz_gen_0_buzzer_out 1 2 1 830 1260n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 620 450 1180 810
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 40 630 420
+preplace netloc processing_system7_0_GPIO_O 1 1 2 480 1490 NJ
+preplace netloc processing_system7_0_I2C0_SCL_O 1 1 2 NJ 240 850
+preplace netloc processing_system7_0_I2C0_SCL_T 1 1 2 NJ 260 840
+preplace netloc processing_system7_0_I2C0_SDA_O 1 1 2 510J 210 N
+preplace netloc processing_system7_0_I2C0_SDA_T 1 1 2 490J 220 850
+preplace netloc processing_system7_0_I2C1_SCL_O 1 1 2 NJ 380 800
+preplace netloc processing_system7_0_I2C1_SCL_T 1 1 2 NJ 400 790
+preplace netloc processing_system7_0_I2C1_SDA_O 1 1 2 NJ 320 820
+preplace netloc processing_system7_0_I2C1_SDA_T 1 1 2 NJ 340 810
+preplace netloc processing_system7_0_SPI0_MOSI_O 1 1 3 500J 550 NJ 550 1150J
+preplace netloc processing_system7_0_SPI0_SCLK_O 1 1 3 510J 560 NJ 560 NJ
+preplace netloc processing_system7_0_SPI0_SS_O 1 1 3 470J 570 NJ 570 1150J
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 440 1190 850
+preplace netloc rx_0_1 1 0 4 NJ 940 NJ 940 NJ 940 1140
+preplace netloc util_vector_logic_0_Res 1 3 1 NJ 1380
+preplace netloc xlslice_0_Dout 1 3 1 NJ 1490
+preplace netloc ControlPins_Dout 1 2 1 NJ 1590
+preplace netloc util_vector_logic_1_Res 1 3 1 NJ 1590
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 100 NJ 100 1150J
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 120 NJ 120 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460 520n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 1060
+levelinfo -pg 1 0 230 650 1000 1170
+pagesize -pg 1 -db -bbox -sgen -120 0 1320 1650
+"
+}
+{
+   "da_axi4_cnt":"2",
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}
